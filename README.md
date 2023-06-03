@@ -15,28 +15,59 @@ Fill in the blanks! User stories are most often phrased as:
 
  "As a stay at home mom I need real reviews from local restaurants so I can feed my family."
 
- _________________
- | Method | Path | Purpose|
- _______________________
- |GET | / | Home page |
- _______________________
- |GET | /places | Places index page|
-  _______________________
- |POST | /places | Create new places |
-  _______________________
- |GET | /places/new | Form page for creating a new place |
-  _______________________
- |GET | places/:id | Details about a particular place |
-  _______________________
- |PUT | places/:id | Update a particulas place |
-  _______________________
- |GET | /places/:id/edit | Form page for editing an existing place |
-  _______________________
- |DELETE | /places/:id | Delete a particular place |
-  _______________________
- |POST | /places/:id/rant | Create a rant (comment) about a particular place |
-  _______________________
- |GET | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
-  _______________________
- |GET | * | 404 page (matches any route not defined above) |
-  _______________________
+## Routes
+
+| Method | Path | Purpose |
+| ------ | ------------------------------------- | ----------------------------- |
+| GET | `/` | The home page |
+| GET | `/places` | Index page listing all places |
+| GET | `/places/new` | New form for a place |
+| POST | `/places` | Create a new place |
+| GET | `/places/:id` | Show one place in detail (Associated rants, new rant form, delete rant button) |
+| GET | `/places/:id/edit` | Edit form for a place |
+| PUT | `/places/:id` | Make changes to existing place |
+| DELETE | `/places/:id` | Delete a place |
+| POST | `/places/:id/rant` | Add rant to a place |
+| DELETE | `/places/:id/rant/:rantId` | Delete a rant |
+
+## Database
+
+**places** 
+
+| Field | Type |
+| ---------- | ------------ |
+| _id | Object ID |
+| name | String |
+| city | String |
+| state | String |
+| cuisines | String |
+| pic | String |
+
+**rants**
+
+| Field | Type |
+| ---------- | ------------ |
+| _id | Object ID |
+| place_id | ref(places) Object_Id |
+| rant | Boolean |
+| rating | Number |
+| comment | String |
+| reviewer | String |
+
+## Planning
+
+### User Stories
+
+TBD
+
+### Wireframes
+
+TBD
+
+## Notes
+
+Possible bonus ideas:
+
+* Update for comments
+* Aggregate rating for a place
+* Auto-complete state dropdown
