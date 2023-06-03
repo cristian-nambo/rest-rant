@@ -29,6 +29,7 @@ Fill in the blanks! User stories are most often phrased as:
 | DELETE | `/places/:id` | Delete a place |
 | POST | `/places/:id/rant` | Add rant to a place |
 | DELETE | `/places/:id/rant/:rantId` | Delete a rant |
+| GET | ` * ` | 404 page (matches any route not defined above) |
 
 ## Database
 
