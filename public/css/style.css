@@ -2,4 +2,6 @@ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  
+  div.center {
+    text-align:center;
+  }

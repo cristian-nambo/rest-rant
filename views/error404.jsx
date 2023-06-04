@@ -10,7 +10,7 @@ function error404 () {
     <div>
       <img src="/images/pitbull404.jpg" alt="NewCastle UnitedStates HDPitbullWallpaper" />
     </div>
-    <div>
+      <div>
         Photo by <a href="AUTHOR_LINK">Jane Almon</a> on <a href="UNSPLASH_LINK">Unsplash</a>
       </div>
 </main>
