@@ -1,4 +1,7 @@
 const React = require('react')
+const currentYear = new Date().getFullYear()
+const footerText = `Site is still under construction by CT 2023 - ${currentYear}`
+
 
 function Def (html) {
     return (
@@ -24,7 +27,7 @@ function Def (html) {
                 </nav>
                 {html.children}
             </body>
-            <footer>Footer Content & Links:</footer>
+            <footer>{footerText}</footer>
         </html>
     )
 }
