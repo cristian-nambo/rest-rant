@@ -7,12 +7,25 @@ function show (data) {
         <Def>
           <main>
             <h1>{data.place.name}</h1>
+            <img src={data.place.pic} />
             <div>
                 <h2>
                     Rating
                 </h2>
                 <p>Not Rated</p>
             </div>
+             <div className="Description">
+                  <h2>
+                     Description
+                  </h2>
+                  <p>
+                     {data.place.showEstablished()}
+                  </p>
+                  <h4>
+                     Serving {data.place.cuisines}
+                  </h4>
+             </div>
+           
             <div>
                 <h2>
                     Comments
@@ -33,3 +46,5 @@ function show (data) {
 }
 
 module.exports = show
+
+

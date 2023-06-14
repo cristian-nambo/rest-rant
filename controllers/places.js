@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     })
 })
 
-//POST ROUTE
+//POST ROUTE  Part8 Bonus to give special error messages with the New Page
 router.post('/', (req, res) => {
   db.Place.create(req.body)
   .then(() => {
@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
   })
 })
 
-
+//NEW
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
