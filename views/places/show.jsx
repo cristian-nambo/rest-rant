@@ -49,7 +49,7 @@ function show (data) {
             <form action={`/places/${data.place.id}/comment`} method="POST">
               <div className="row">
                 <div className="form-group col-sm-12">
-                  <label htmlFor="content">Review</label>
+                  <label htmlFor="content">Comments</label>
                   <textarea id="content" name="content" className="form-control"></textarea>
                 </div>
               </div>
