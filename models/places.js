@@ -32,4 +32,3 @@ module.exports = mongoose.model('Place', placeSchema)
 
 
 
-
