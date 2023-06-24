@@ -23,27 +23,27 @@ async function seed() {
     process.exit()
 }
 
-// // To use await, we need an async function.
-// async function seed() {
-//     // Get the place, H-Thai-ML
-//     let place = await db.Place.findOne({ name: 'Vicks' })
+// To use await, we need an async function.
+async function seed() {
+    // Get the place, H-Thai-ML
+    let place = await db.Place.findOne({ name: 'Vicks' })
 
-//     // Create a fake sample comment.
-//     let comment = await db.Comment.create({
-//         author: 'Cris Nambo',
-//         rant: false,
-//         stars: 5.0,
-//         content: 'Simply delicious food 5 of 5'
-//     })
+    // Create a fake sample comment.
+    let comment = await db.Comment.create({
+        author: 'Cris Nambo',
+        rant: false,
+        stars: 5.0,
+        content: 'Simply delicious food 5 of 5'
+    })
 
-//     // Add that comment to the place's comment array.
-//     place.comments.push(comment.id)
+    // Add that comment to the place's comment array.
+    place.comments.push(comment.id)
 
-//     //save the place now that it has comment
-//     await place.save()
+    //save the place now that it has comment
+    await place.save()
     
-//     // Exit the program
-//     process.exit()
-// }
+    // Exit the program
+    process.exit()
+}
 
 seed()
